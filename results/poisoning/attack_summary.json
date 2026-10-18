@@ -1,0 +1,35 @@
+[
+  {
+    "fraction_tag": "010",
+    "source_class": 1,
+    "target_class": 7,
+    "eligible_records": 6190,
+    "modified_records": 619,
+    "source_class_fraction": 0.1,
+    "whole_training_fraction": 0.011254545454545455,
+    "attack_seed": 42,
+    "artifact": "nested_label_flip_1_to_7_fraction_010.npz"
+  },
+  {
+    "fraction_tag": "030",
+    "source_class": 1,
+    "target_class": 7,
+    "eligible_records": 6190,
+    "modified_records": 1857,
+    "source_class_fraction": 0.3,
+    "whole_training_fraction": 0.033763636363636364,
+    "attack_seed": 42,
+    "artifact": "nested_label_flip_1_to_7_fraction_030.npz"
+  },
+  {
+    "fraction_tag": "050",
+    "source_class": 1,
+    "target_class": 7,
+    "eligible_records": 6190,
+    "modified_records": 3095,
+    "source_class_fraction": 0.5,
+    "whole_training_fraction": 0.05627272727272727,
+    "attack_seed": 42,
+    "artifact": "nested_label_flip_1_to_7_fraction_050.npz"
+  }
+]

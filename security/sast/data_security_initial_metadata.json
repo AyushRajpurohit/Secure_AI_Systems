@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-10-18T08:51:49.859863+00:00",
+  "scope": [
+    "data_security.py"
+  ],
+  "source_sha256": "ebbdea8300eb6def1aa076f8035ded191655b609136c749b4af48ed9f0f19369",
+  "bandit_version": "__main__.py 1.9.4\n  python version = 3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "bandit",
+    "/content/drive/MyDrive/Secure_MNIST_Person2/src/data_security.py",
+    "-f",
+    "json",
+    "-o",
+    "/content/drive/MyDrive/Secure_MNIST_Person2/sast/data_security_initial.json"
+  ],
+  "exit_code": 0,
+  "finding_count": 0,
+  "python_version": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]"
+}

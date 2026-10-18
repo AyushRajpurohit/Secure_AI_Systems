@@ -1,0 +1,13 @@
+{
+  "poisoned_condition": "poisoned_030",
+  "poisoned_candidate_blocked": true,
+  "recovery_source": "clean_training_snapshot.npz",
+  "recovered_data_accepted": true,
+  "recovery_checks": {
+    "image_count_matches": true,
+    "label_count_matches": true,
+    "images_match_trusted_snapshot": true,
+    "labels_match_trusted_snapshot": true
+  },
+  "used_attack_indices_for_recovery": false
+}

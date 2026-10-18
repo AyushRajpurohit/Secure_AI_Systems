@@ -1,0 +1,51 @@
+[
+  {
+    "test_id": "B404",
+    "line": 680,
+    "severity": "LOW",
+    "disposition": "Reviewed: controlled Bandit invocation/import; no exploitable issue identified under stated attacker model",
+    "code": "679 # Notebook cell index 33\n680 import subprocess\n681 from datetime import datetime, timezone\n"
+  },
+  {
+    "test_id": "B603",
+    "line": 683,
+    "severity": "LOW",
+    "disposition": "Reviewed: controlled Bandit invocation/import; no exploitable issue identified under stated attacker model",
+    "code": "682 \n683 version_process = subprocess.run(\n684     [sys.executable, \"-m\", \"bandit\", \"--version\"],\n685     capture_output=True,\n686     text=True,\n687     check=True,\n688 )\n689 \n"
+  },
+  {
+    "test_id": "B603",
+    "line": 705,
+    "severity": "LOW",
+    "disposition": "Reviewed: controlled Bandit invocation/import; no exploitable issue identified under stated attacker model",
+    "code": "704 \n705 scan_process = subprocess.run(\n706     command,\n707     capture_output=True,\n708     text=True,\n709 )\n710 \n"
+  },
+  {
+    "test_id": "B603",
+    "line": 1656,
+    "severity": "LOW",
+    "disposition": "Reviewed: controlled Bandit invocation/import; no exploitable issue identified under stated attacker model",
+    "code": "1655 \n1656 scan_process = subprocess.run(\n1657     scan_command,\n1658     capture_output=True,\n1659     text=True,\n1660 )\n1661 \n"
+  },
+  {
+    "test_id": "B603",
+    "line": 1683,
+    "severity": "LOW",
+    "disposition": "Reviewed: controlled Bandit invocation/import; no exploitable issue identified under stated attacker model",
+    "code": "1682 \n1683 version_process = subprocess.run(\n1684     [sys.executable, \"-m\", \"bandit\", \"--version\"],\n1685     capture_output=True,\n1686     text=True,\n1687     check=True,\n1688 )\n1689 \n"
+  },
+  {
+    "test_id": "B603",
+    "line": 1816,
+    "severity": "LOW",
+    "disposition": "Reviewed: controlled Bandit invocation/import; no exploitable issue identified under stated attacker model",
+    "code": "1815 \n1816 notebook_scan_process = subprocess.run(\n1817     notebook_scan_command,\n1818     capture_output=True,\n1819     text=True,\n1820 )\n1821 \n"
+  },
+  {
+    "test_id": "B603",
+    "line": 1839,
+    "severity": "LOW",
+    "disposition": "Reviewed: controlled Bandit invocation/import; no exploitable issue identified under stated attacker model",
+    "code": "1838 \n1839 bandit_version_process = subprocess.run(\n1840     [sys.executable, \"-m\", \"bandit\", \"--version\"],\n1841     capture_output=True,\n1842     text=True,\n1843     check=True,\n1844 )\n1845 \n"
+  }
+]

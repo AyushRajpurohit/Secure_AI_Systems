@@ -1,0 +1,152 @@
+{
+  "errors": [],
+  "generated_at": "2026-10-18T09:59:29Z",
+  "metrics": {
+    "/content/drive/MyDrive/Secure_MNIST_Person2/sast/notebook_initial/notebook_export.py": {
+      "CONFIDENCE.HIGH": 5,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 5,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1308,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 5,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 5,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1308,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "804 \n805 import subprocess\n806 from datetime import datetime, timezone\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "/content/drive/MyDrive/Secure_MNIST_Person2/sast/notebook_initial/notebook_export.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 805,
+      "line_range": [
+        805
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "807 \n808 version_process = subprocess.run(\n809     [sys.executable, \"-m\", \"bandit\", \"--version\"],\n810     capture_output=True,\n811     text=True,\n812     check=True,\n813 )\n814 \n",
+      "col_offset": 18,
+      "end_col_offset": 1,
+      "filename": "/content/drive/MyDrive/Secure_MNIST_Person2/sast/notebook_initial/notebook_export.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 808,
+      "line_range": [
+        808,
+        809,
+        810,
+        811,
+        812,
+        813
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "829 \n830 scan_process = subprocess.run(\n831     command,\n832     capture_output=True,\n833     text=True,\n834 )\n835 \n",
+      "col_offset": 15,
+      "end_col_offset": 1,
+      "filename": "/content/drive/MyDrive/Secure_MNIST_Person2/sast/notebook_initial/notebook_export.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 830,
+      "line_range": [
+        830,
+        831,
+        832,
+        833,
+        834
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "1854 \n1855 scan_process = subprocess.run(\n1856     scan_command,\n1857     capture_output=True,\n1858     text=True,\n1859 )\n1860 \n",
+      "col_offset": 15,
+      "end_col_offset": 1,
+      "filename": "/content/drive/MyDrive/Secure_MNIST_Person2/sast/notebook_initial/notebook_export.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 1855,
+      "line_range": [
+        1855,
+        1856,
+        1857,
+        1858,
+        1859
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "1881 \n1882 version_process = subprocess.run(\n1883     [sys.executable, \"-m\", \"bandit\", \"--version\"],\n1884     capture_output=True,\n1885     text=True,\n1886     check=True,\n1887 )\n1888 \n",
+      "col_offset": 18,
+      "end_col_offset": 1,
+      "filename": "/content/drive/MyDrive/Secure_MNIST_Person2/sast/notebook_initial/notebook_export.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 1882,
+      "line_range": [
+        1882,
+        1883,
+        1884,
+        1885,
+        1886,
+        1887
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    }
+  ]
+}

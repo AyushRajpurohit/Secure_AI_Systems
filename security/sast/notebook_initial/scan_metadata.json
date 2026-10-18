@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-10-18T09:59:30.578450+00:00",
+  "scope": "Downloaded notebook snapshot exported to Python",
+  "original_filename": "Ayush_MNIST_Security.ipynb",
+  "code_cell_count": 40,
+  "notebook_sha256": "44968e07ef0b7712273843b08dffd4a6256f066fbd62cc75d84a0f1928826b15",
+  "exported_script_sha256": "5f3cff39d646e317802390962036a1f756247c5d2cbdac88062acc613cdad743",
+  "bandit_version": "__main__.py 1.9.4\n  python version = 3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "bandit",
+    "/content/drive/MyDrive/Secure_MNIST_Person2/sast/notebook_initial/notebook_export.py",
+    "-f",
+    "json",
+    "-o",
+    "/content/drive/MyDrive/Secure_MNIST_Person2/sast/notebook_initial/bandit_report.json"
+  ],
+  "exit_code": 1,
+  "finding_count": 5,
+  "limitations": [
+    "Covers the downloaded snapshot, not subsequent edits.",
+    "Notebook magic and shell commands may be exported as IPython calls rather than directly analyzed Python.",
+    "Does not audit installed dependencies or Google Drive permissions."
+  ]
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "condition": "clean",
+    "accepted": true,
+    "checks": {
+      "image_count_matches": true,
+      "label_count_matches": true,
+      "images_match_trusted_snapshot": true,
+      "labels_match_trusted_snapshot": true
+    },
+    "verification_ms": 72.62418600021192
+  },
+  {
+    "condition": "poisoned_010",
+    "accepted": false,
+    "checks": {
+      "image_count_matches": true,
+      "label_count_matches": true,
+      "images_match_trusted_snapshot": true,
+      "labels_match_trusted_snapshot": false
+    },
+    "verification_ms": 67.65106500006368
+  },
+  {
+    "condition": "poisoned_030",
+    "accepted": false,
+    "checks": {
+      "image_count_matches": true,
+      "label_count_matches": true,
+      "images_match_trusted_snapshot": true,
+      "labels_match_trusted_snapshot": false
+    },
+    "verification_ms": 67.10394599986103
+  },
+  {
+    "condition": "poisoned_050",
+    "accepted": false,
+    "checks": {
+      "image_count_matches": true,
+      "label_count_matches": true,
+      "images_match_trusted_snapshot": true,
+      "labels_match_trusted_snapshot": false
+    },
+    "verification_ms": 137.32035100019857
+  }
+]

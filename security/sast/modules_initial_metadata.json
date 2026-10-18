@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-10-18T09:52:59.803464+00:00",
+  "scope": "Python modules under src; notebook cells excluded",
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "bandit",
+    "-r",
+    "/content/drive/MyDrive/Secure_MNIST_Person2/src",
+    "-f",
+    "json",
+    "-o",
+    "/content/drive/MyDrive/Secure_MNIST_Person2/sast/modules_initial.json"
+  ],
+  "exit_code": 0,
+  "bandit_version": "__main__.py 1.9.4\n  python version = 3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "source_hashes": {
+    "data_security.py": "ebbdea8300eb6def1aa076f8035ded191655b609136c749b4af48ed9f0f19369",
+    "mnist_training.py": "2a3e8bb86d6d4a3359666060212d09fc2b5e1d2a07ab584c05fa1b1bf8c4f557"
+  },
+  "finding_count": 0
+}

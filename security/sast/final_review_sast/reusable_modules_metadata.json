@@ -1,0 +1,23 @@
+{
+  "bandit_version": "1.9.4",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "bandit",
+    "-r",
+    "output/Person2_MNIST_Package/src",
+    "-f",
+    "json",
+    "-o",
+    "output/Person2_MNIST_Package/evidence/final_review_sast/reusable_modules.json"
+  ],
+  "source_hashes": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/data_security.py": "ebbdea8300eb6def1aa076f8035ded191655b609136c749b4af48ed9f0f19369",
+    "src/mnist_training.py": "2845936124462a6e80158458c4d2499479f83a0413cf5b75a6aa104ae9801ace"
+  },
+  "scope_exclusions": [
+    "Notebook magic/shell lines are comments in the latest notebook export. Export is scanned, not executed."
+  ],
+  "runtime_validation": "PyTorch is not installed in the review environment; revised training module has syntax/interface checks only."
+}

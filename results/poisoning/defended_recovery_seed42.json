@@ -1,0 +1,205 @@
+{
+  "condition": "defended_recovery",
+  "defense": "integrity gate followed by trusted snapshot recovery",
+  "rejected_attack": "poisoned_050",
+  "training_data_verified": true,
+  "modified_records": 0,
+  "seed": 42,
+  "device": "cpu",
+  "device_name": "CPU",
+  "torch_version": "2.11.0+cpu",
+  "best_epoch": 5,
+  "training_seconds": 244.74039946100038,
+  "config": {
+    "split_seed": 42,
+    "training_seed": 42,
+    "train_size": 55000,
+    "validation_size": 5000,
+    "test_size": 10000,
+    "batch_size": 64,
+    "evaluation_batch_size": 256,
+    "epochs": 5,
+    "learning_rate": 0.001,
+    "optimizer": "Adam",
+    "loss": "CrossEntropyLoss",
+    "preprocessing": "uint8 pixels converted to float32 and divided by 255",
+    "normalization": "none beyond scaling to [0,1]",
+    "checkpoint_selection": "lowest validation loss"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.1945047905293378,
+      "training_accuracy": 0.9406909090909091,
+      "validation_loss": 0.07301243972778321,
+      "validation_accuracy": 0.9782
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.0512342338711362,
+      "training_accuracy": 0.9846909090909091,
+      "validation_loss": 0.05056878042221069,
+      "validation_accuracy": 0.9866
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.03499195164442062,
+      "training_accuracy": 0.9895272727272727,
+      "validation_loss": 0.04114455757141113,
+      "validation_accuracy": 0.9876
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.024375197290121154,
+      "training_accuracy": 0.9924909090909091,
+      "validation_loss": 0.04984002890586853,
+      "validation_accuracy": 0.9866
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.019984017433780667,
+      "training_accuracy": 0.9932727272727273,
+      "validation_loss": 0.040579868125915526,
+      "validation_accuracy": 0.9884
+    }
+  ],
+  "test_metrics": {
+    "accuracy": 0.9883,
+    "loss": 0.03749657526891679,
+    "class_1_recall": 0.9973568281938326,
+    "targeted_1_to_7_error_rate": 0.000881057268722467,
+    "confusion_matrix": [
+      [
+        977,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1132,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1016,
+        6,
+        1,
+        0,
+        0,
+        6,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1009,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        977,
+        0,
+        0,
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        0,
+        0,
+        8,
+        0,
+        878,
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        6,
+        4,
+        0,
+        1,
+        3,
+        20,
+        918,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        3,
+        0,
+        0,
+        0,
+        1018,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        967,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        6,
+        4,
+        0,
+        4,
+        1,
+        991
+      ]
+    ],
+    "examples": 10000
+  },
+  "inference_timing": {
+    "scope": "forward pass; inputs already on device",
+    "batch_size": 256,
+    "warmup_runs": 10,
+    "measured_runs": 50,
+    "median_batch_ms": 106.17375299989362,
+    "p95_batch_ms": 126.03834790002105,
+    "amortized_ms_per_image": 0.41474122265583446,
+    "device": "cpu"
+  }
+}

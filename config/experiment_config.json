@@ -1,0 +1,16 @@
+{
+  "split_seed": 42,
+  "training_seed": 42,
+  "train_size": 55000,
+  "validation_size": 5000,
+  "test_size": 10000,
+  "batch_size": 64,
+  "evaluation_batch_size": 256,
+  "epochs": 5,
+  "learning_rate": 0.001,
+  "optimizer": "Adam",
+  "loss": "CrossEntropyLoss",
+  "preprocessing": "uint8 pixels converted to float32 and divided by 255",
+  "normalization": "none beyond scaling to [0,1]",
+  "checkpoint_selection": "lowest validation loss"
+}

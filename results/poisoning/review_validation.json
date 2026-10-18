@@ -1,0 +1,77 @@
+[
+  {
+    "file": "clean_baseline_seed42.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "clean_baseline_seed43.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "clean_baseline_seed44.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "poisoned_010_seed42.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "poisoned_010_seed43.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "poisoned_010_seed44.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "poisoned_030_seed42.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "poisoned_030_seed43.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "poisoned_030_seed44.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "poisoned_050_seed42.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "poisoned_050_seed43.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "file": "poisoned_050_seed44.json",
+    "confusion_metrics_consistent": true,
+    "test_examples": 10000,
+    "best_epoch_matches_minimum_validation_loss": true
+  },
+  {
+    "note": "Model checkpoint files, attack NPZs and trusted snapshot were excluded from the uploaded evidence; their bytes could not be independently verified."
+  }
+]
