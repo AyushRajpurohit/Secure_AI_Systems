@@ -2,7 +2,7 @@
   "errors": [],
   "generated_at": "2026-10-18T09:52:57Z",
   "metrics": {
-    "/content/drive/MyDrive/Secure_MNIST_Person2/src/data_security.py": {
+    "/content/drive/MyDrive/Secure_MNIST/src/data_security.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -15,7 +15,7 @@
       "nosec": 0,
       "skipped_tests": 0
     },
-    "/content/drive/MyDrive/Secure_MNIST_Person2/src/mnist_training.py": {
+    "/content/drive/MyDrive/Secure_MNIST/src/mnist_training.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
