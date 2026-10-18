@@ -9,11 +9,11 @@
     "/usr/bin/python3",
     "-m",
     "bandit",
-    "/content/drive/MyDrive/Secure_MNIST_Person2/src/data_security.py",
+    "/content/drive/MyDrive/Secure_MNIST/src/data_security.py",
     "-f",
     "json",
     "-o",
-    "/content/drive/MyDrive/Secure_MNIST_Person2/sast/data_security_initial.json"
+    "/content/drive/MyDrive/Secure_MNIST/sast/data_security_initial.json"
   ],
   "exit_code": 0,
   "finding_count": 0,
