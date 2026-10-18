@@ -1,7 +1,5 @@
 # Secure MNIST: security engineering and training-data integrity
 
-Person 2 contribution. Prepared from the supplied notebook and saved experiment evidence. This is a report section for integration with Person 1's adversarial-input experiments, not the complete two-person submission.
-
 ## 1. System and experimental design
 
 The Colab application trains a CNN to classify MNIST digits. Data flows from the external MNIST source into local arrays, a fixed split, CNN training, saved weights and held-out evaluation. The experimental application has no public prediction API and no automatic feedback-based retraining.
@@ -110,12 +108,4 @@ The supplied ZIP omits the actual attack NPZ files, trusted snapshot/reference a
 
 ## 10. Conclusion and integration
 
-Concentrated label poisoning can substantially damage one class while affecting only a small fraction of the entire training set. Trusted-snapshot integrity checks blocked the tested modifications, and clean recovery restored the seed-42 baseline. Integrity controls complement Person 1's adversarial training: they address training-data tampering rather than inference-time perturbations.
-
-Before submission, add the actual GitHub repository URL, integrate Person 1's ML01 attack/adversarial-training sections, and rerun SAST on the final combined code. No repository has been published by this package.
-
-## Sources
-
-- Supplied assignment: Assignment.docx.pdf, tasks 3–7 and deliverables.
-- Supplied Class - 12.pdf, especially STRIDE/LINDDUN, ML02, ML06, ML08 and ML10 slides.
-- Uploaded Ayush_MNIST_Security.ipynb and Person2_MNIST_Evidence.zip; detailed result paths are preserved in this package.
+Concentrated label poisoning can substantially damage one class while affecting only a small fraction of the entire training set. Trusted-snapshot integrity checks blocked the tested modifications, and clean recovery restored the seed-42 baseline. Integrity controls complement adversarial training: they address training-data tampering rather than inference-time perturbations.
