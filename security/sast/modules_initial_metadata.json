@@ -6,11 +6,11 @@
     "-m",
     "bandit",
     "-r",
-    "/content/drive/MyDrive/Secure_MNIST_Person2/src",
+    "/content/drive/MyDrive/Secure_MNIST/src",
     "-f",
     "json",
     "-o",
-    "/content/drive/MyDrive/Secure_MNIST_Person2/sast/modules_initial.json"
+    "/content/drive/MyDrive/Secure_MNIST/sast/modules_initial.json"
   ],
   "exit_code": 0,
   "bandit_version": "__main__.py 1.9.4\n  python version = 3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
