@@ -1,0 +1,25 @@
+Epoch 01/5 | train_loss=0.376832 | val_acc=97.66%
+Epoch 02/5 | train_loss=0.125420 | val_acc=97.64%
+Epoch 03/5 | train_loss=0.099436 | val_acc=97.56%
+Epoch 04/5 | train_loss=0.090239 | val_acc=98.02%
+Epoch 05/5 | train_loss=0.033602 | val_acc=98.26%
+
+=== Adversarially trained model on clean MNIST test set ===
+Loss: 0.046315
+Accuracy: 98.54%
+Examples: 10000
+Forward-pass time: 0.038544 s
+Average inference time: 0.003854 ms/sample
+Confusion matrix:
+[[ 978    0    0    0    0    0    0    0    1    1]
+ [   0 1131    2    2    0    0    0    0    0    0]
+ [   1    0 1029    1    0    0    0    0    1    0]
+ [   0    0    5  996    0    5    0    0    3    1]
+ [   1    1    3    0  944    0    1    0    6   26]
+ [   2    0    0    4    0  881    2    0    0    3]
+ [   6    2    1    0    0    3  944    0    2    0]
+ [   0    4   14    1    0    1    0  993    4   11]
+ [   4    0    4    2    0    1    0    0  958    5]
+ [   2    1    0    1    0    3    0    2    0 1000]]
+
+Saved defended checkpoint to: /home/cs26mtech12001/SSE-Assignment/mnist_secure_ai/checkpoints/adversarially_trained_model.pt

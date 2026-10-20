@@ -1,0 +1,27 @@
+Using device: cuda
+Epoch 01/5 | train_loss=0.187969 | val_loss=0.078711 | val_acc=97.60%
+Epoch 02/5 | train_loss=0.051064 | val_loss=0.047304 | val_acc=98.72%
+Epoch 03/5 | train_loss=0.034602 | val_loss=0.044358 | val_acc=98.82%
+Epoch 04/5 | train_loss=0.026287 | val_loss=0.053054 | val_acc=98.40%
+Epoch 05/5 | train_loss=0.019994 | val_loss=0.040166 | val_acc=98.76%
+
+=== Official MNIST test set ===
+Loss: 0.034715
+Accuracy: 98.84%
+Examples: 10000
+Forward-pass time: 0.039330 s
+Average inference time: 0.003933 ms/sample
+Confusion matrix:
+[[ 979    0    0    1    0    0    0    0    0    0]
+ [   0 1132    0    1    0    0    1    0    1    0]
+ [   2    0 1027    0    0    0    0    2    1    0]
+ [   1    0    1 1002    0    2    0    0    4    0]
+ [   0    0    2    0  959    0    1    0    2   18]
+ [   1    0    0    4    0  884    1    0    0    2]
+ [   7    2    1    0    1    6  939    0    2    0]
+ [   0    2   15    2    0    0    0 1001    1    7]
+ [   5    0    2    0    0    1    0    0  961    5]
+ [   0    0    1    1    2    4    0    1    0 1000]]
+
+Saved checkpoint to: checkpoints/clean_model.pt
+Saved run metadata to: results/clean_run_metadata.json

@@ -1,0 +1,72 @@
+Using device: cuda
+Epoch 1/5 | Batch 200/860 | Loss 0.2873
+Epoch 1/5 | Batch 400/860 | Loss 0.3344
+Epoch 1/5 | Batch 600/860 | Loss 0.2372
+Epoch 1/5 | Batch 800/860 | Loss 0.1415
+
+Epoch 01/5
+Train loss: 0.370637
+Validation loss: 0.069645
+Validation accuracy: 97.94%
+--------------------------------------------------
+Epoch 2/5 | Batch 200/860 | Loss 0.0804
+Epoch 2/5 | Batch 400/860 | Loss 0.1147
+Epoch 2/5 | Batch 600/860 | Loss 0.3168
+Epoch 2/5 | Batch 800/860 | Loss 0.1054
+
+Epoch 02/5
+Train loss: 0.146084
+Validation loss: 0.051026
+Validation accuracy: 98.42%
+--------------------------------------------------
+Epoch 3/5 | Batch 200/860 | Loss 0.1766
+Epoch 3/5 | Batch 400/860 | Loss 0.0850
+Epoch 3/5 | Batch 600/860 | Loss 0.1462
+Epoch 3/5 | Batch 800/860 | Loss 0.1139
+
+Epoch 03/5
+Train loss: 0.115251
+Validation loss: 0.047783
+Validation accuracy: 98.78%
+--------------------------------------------------
+Epoch 4/5 | Batch 200/860 | Loss 0.2269
+Epoch 4/5 | Batch 400/860 | Loss 0.0347
+Epoch 4/5 | Batch 600/860 | Loss 0.1056
+Epoch 4/5 | Batch 800/860 | Loss 0.0970
+
+Epoch 04/5
+Train loss: 0.095978
+Validation loss: 0.040399
+Validation accuracy: 98.70%
+--------------------------------------------------
+Epoch 5/5 | Batch 200/860 | Loss 0.0369
+Epoch 5/5 | Batch 400/860 | Loss 0.0471
+Epoch 5/5 | Batch 600/860 | Loss 0.1961
+Epoch 5/5 | Batch 800/860 | Loss 0.0503
+
+Epoch 05/5
+Train loss: 0.082325
+Validation loss: 0.033522
+Validation accuracy: 98.94%
+--------------------------------------------------
+
+Saved PGD defended model to:
+/home/cs26mtech12001/SSE-Assignment/mnist_secure_ai/checkpoints/pgd_adversarially_trained_model.pt
+
+=== PGD adversarially trained model on clean MNIST test set ===
+Loss: 0.028975
+Accuracy: 98.99%
+Examples: 10000
+Forward-pass time: 0.040762 s
+Average inference time: 0.004076 ms/sample
+Confusion matrix:
+[[ 977    0    0    0    0    0    1    1    1    0]
+ [   0 1133    2    0    0    0    0    0    0    0]
+ [   2    0 1027    0    0    0    0    3    0    0]
+ [   0    0    2 1003    0    1    0    1    2    1]
+ [   1    0    1    0  958    0    3    2    3   14]
+ [   2    0    0    5    0  884    1    0    0    0]
+ [   3    2    0    1    1    1  948    0    2    0]
+ [   0    2    5    1    0    0    0 1018    1    1]
+ [   4    0    3    1    1    1    0    1  958    5]
+ [   1    2    1    0    2    4    0    6    0  993]]

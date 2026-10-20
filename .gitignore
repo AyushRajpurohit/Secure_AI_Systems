@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+
+# IDE / editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local archives and old run backups; keep the dataset and checkpoints tracked.
+*.zip
+*.tar.gz
+results/*/before/
+results/*/checkpoints_before/
+
+# Incomplete setup attempts; their files remain available locally.
+results/final_run_20261019_185926/
+results/full_run_20261019_194018_JeIVZc/
+results/full_run_20261019_212534_hy7AUt/

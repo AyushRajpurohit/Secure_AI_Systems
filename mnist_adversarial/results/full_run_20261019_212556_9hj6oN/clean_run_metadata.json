@@ -1,0 +1,189 @@
+{
+  "hardware": {
+    "python_version": "3.10.22",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "pytorch_version": "2.7.0+cu126",
+    "device": "cuda",
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "gpu_name": "NVIDIA RTX 6000 Ada Generation"
+  },
+  "data_config": {
+    "data_dir": "./data",
+    "batch_size": 64,
+    "split_seed": 42,
+    "train_size": 55000,
+    "val_size": 5000,
+    "num_workers": 0,
+    "pin_memory": false
+  },
+  "train_config": {
+    "learning_rate": 0.001,
+    "epochs": 5,
+    "random_seed": 42,
+    "checkpoint_path": "./checkpoints/clean_model.pt",
+    "metadata_path": "./results/clean_run_metadata.json"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.1879685226380825,
+      "val_loss": 0.07871059924662113,
+      "val_accuracy": 0.976
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.051063904846070166,
+      "val_loss": 0.04730391979813576,
+      "val_accuracy": 0.9872
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.03460229795812206,
+      "val_loss": 0.04435823564082384,
+      "val_accuracy": 0.9882
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.026287394179810176,
+      "val_loss": 0.05305428090691566,
+      "val_accuracy": 0.984
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.019994201418249445,
+      "val_loss": 0.04016627712696791,
+      "val_accuracy": 0.9876
+    }
+  ],
+  "test": {
+    "loss": 0.034715238659759055,
+    "accuracy": 0.9884,
+    "total_examples": 10000,
+    "total_inference_seconds": 0.039330315426923335,
+    "avg_inference_ms_per_sample": 0.003933031542692333,
+    "confusion_matrix": [
+      [
+        979,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1132,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        1027,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1002,
+        0,
+        2,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        959,
+        0,
+        1,
+        0,
+        2,
+        18
+      ],
+      [
+        1,
+        0,
+        0,
+        4,
+        0,
+        884,
+        1,
+        0,
+        0,
+        2
+      ],
+      [
+        7,
+        2,
+        1,
+        0,
+        1,
+        6,
+        939,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        15,
+        2,
+        0,
+        0,
+        0,
+        1001,
+        1,
+        7
+      ],
+      [
+        5,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        961,
+        5
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        2,
+        4,
+        0,
+        1,
+        0,
+        1000
+      ]
+    ]
+  },
+  "timing_method": "Forward-pass timing only using time.perf_counter(); CUDA/MPS synchronized before and after forward pass when applicable."
+}

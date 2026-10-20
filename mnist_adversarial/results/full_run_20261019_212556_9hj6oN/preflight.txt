@@ -1,0 +1,52 @@
+{
+  "python_executable": "/home/cs26mtech12001/miniconda3/envs/sigmerge/bin/python",
+  "hardware": {
+    "python_version": "3.10.22",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "pytorch_version": "2.7.0+cu126",
+    "device": "cuda",
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "gpu_name": "NVIDIA RTX 6000 Ada Generation"
+  },
+  "torchvision": "0.22.0+cu126",
+  "numpy": "1.26.4",
+  "scikit_learn": "1.7.0",
+  "data_config": {
+    "data_dir": "./data",
+    "batch_size": 64,
+    "split_seed": 42,
+    "train_size": 55000,
+    "val_size": 5000,
+    "num_workers": 0,
+    "pin_memory": false
+  },
+  "baseline_training": {
+    "learning_rate": 0.001,
+    "epochs": 5,
+    "random_seed": 42,
+    "checkpoint_path": "./checkpoints/clean_model.pt",
+    "metadata_path": "./results/clean_run_metadata.json"
+  },
+  "evaluation": {
+    "fgsm_epsilon": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "baseline_pgd_epsilon": [
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "defense_pgd_epsilon": [
+      0.3
+    ],
+    "pgd_alpha": 0.01,
+    "pgd_steps": 40,
+    "random_start": true,
+    "trajectories": 1
+  }
+}
+Recorded actual generated split: 55000 5000 10000
