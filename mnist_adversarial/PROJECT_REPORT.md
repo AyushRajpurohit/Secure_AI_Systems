@@ -144,7 +144,7 @@ FGSM accuracy increased with epsilon and reached **99.56% at epsilon 0.3**, even
 
 The PGD-trained model correctly classified **5,508 of 10,000 attacked images** under PGD at epsilon 0.3, compared with zero for the baseline and FGSM-trained models. It gave the strongest protection among the three models under this evaluation, although it still misclassified 44.92% of attacked images.
 
-## 6. Checks and reproducibility
+## 6. Limitations
 
 All results here are full-test results from one seed and the stated attack configurations. There were no additional PGD restarts or best-iterate tracking. These measurements do not certify resistance to every possible allowed perturbation.
 
@@ -162,7 +162,7 @@ The baseline recognized clean digits accurately but failed under PGD at epsilon 
 - Complete run: [results/full_run_20261019_212556_9hj6oN/](results/full_run_20261019_212556_9hj6oN/).
 - Full-precision metrics and all matrices: [evaluation/metrics.json](results/full_run_20261019_212556_9hj6oN/evaluation/metrics.json).
 - Tests, sanity statistics, and printed results: [evaluation/evaluation.txt](results/full_run_20261019_212556_9hj6oN/evaluation/evaluation.txt).
-- Dataset attribution: [data/README.md](data/README.md).
+- Dataset hashes: [data/SHA256SUMS](data/SHA256SUMS).
 - Exact model files: `checkpoints/clean_model.pt`, `checkpoints/adversarially_trained_model.pt`, `checkpoints/pgd_adversarially_trained_model.pt`; identities are recorded in `checkpoints/SHA256SUMS`.
 
-Values in the tables are rounded for readability. The linked JSON retains the saved full precision. Older audit and failed-run results were not used in this report.
+Values in the tables are rounded for readability. The linked JSON retains the saved full precision.

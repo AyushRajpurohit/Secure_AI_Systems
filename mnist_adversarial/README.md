@@ -1,10 +1,10 @@
 # Secure AI Systems — MNIST Red/Blue Teaming
 
-PyTorch CNN baseline, untargeted white-box FGSM/PGD attacks, and FGSM/PGD adversarial training on MNIST. Source, checkpoints, and existing result files are included.
+A PyTorch CNN for MNIST, tested with untargeted white-box FGSM and PGD attacks and defended with adversarial training.
 
 ## Completed results
 
-The final run is `results/full_run_20261019_212556_9hj6oN/`. It completed training and evaluation, passed all 14 correctness tests, and preserved source, dataset, and checkpoint integrity during the recorded checks.
+Results from `results/full_run_20261019_212556_9hj6oN/`:
 
 | Model | Clean accuracy | FGSM epsilon 0.3 | PGD epsilon 0.3 |
 | --- | ---: | ---: | ---: |
@@ -12,9 +12,11 @@ The final run is `results/full_run_20261019_212556_9hj6oN/`. It completed traini
 | FGSM-trained | 98.54% | 99.56% | 0.00% |
 | PGD-trained | 98.99% | 77.75% | 55.08% |
 
-All figures use the full 10,000-image test set. PGD uses alpha 0.01, 40 steps, and one random start. Read [PROJECT_REPORT.md](PROJECT_REPORT.md) for the report, [results.md](results.md) for the short summary, and [CONFUSION_MATRICES.md](CONFUSION_MATRICES.md) for all 18 clean/attacked matrices. Full-precision values are in [evaluation/metrics.json](results/full_run_20261019_212556_9hj6oN/evaluation/metrics.json). [PUBLICATION_REVIEW.md](PUBLICATION_REVIEW.md) records the final verification and publication checks. The earlier audit files are historical and do not supply the final result figures.
+All figures use the full 10,000-image test set. PGD uses alpha 0.01, 40 steps, and one random start. Read [PROJECT_REPORT.md](PROJECT_REPORT.md) for the report, [results.md](results.md) for the short summary, and [CONFUSION_MATRICES.md](CONFUSION_MATRICES.md) for all 18 clean/attacked matrices. Full-precision values are in [evaluation/metrics.json](results/full_run_20261019_212556_9hj6oN/evaluation/metrics.json).
 
 ## Setup
+
+Run the commands below from `mnist_adversarial/`. MNIST is included in `data/` and is downloaded if missing.
 
 ```bash
 python -m venv .venv
@@ -22,9 +24,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Run commands from the repository root. MNIST downloads to `./data` if needed. Virtual environments are machine-specific; recreate `.venv` if its original Python interpreter is unavailable.
-
-The completed GPU run used Python 3.10.22, PyTorch 2.7.0+cu126, torchvision 0.22.0+cu126, NumPy 1.26.4, and scikit-learn 1.7.0 on an NVIDIA RTX 6000 Ada Generation GPU. The exact environment is recorded with the run. `requirements.txt` remains the existing unpinned dependency list; installing it on another machine does not guarantee identical versions or timings.
+The completed GPU run used Python 3.10.22, PyTorch 2.7.0+cu126, torchvision 0.22.0+cu126, NumPy 1.26.4, and scikit-learn 1.7.0 on an NVIDIA RTX 6000 Ada Generation GPU. Package versions are recorded in the run’s `environment.txt`. Dependencies in `requirements.txt` are unpinned, so versions and timings may differ on another machine.
 
 To run the entire pipeline in your working PyTorch environment:
 
@@ -38,7 +38,7 @@ The script backs up existing checkpoints/metric files, retrains all three models
 python scripts/verify_saved_models.py --output-dir results/verified_run
 ```
 
-The output directory must be new. Both scripts record failures instead of presenting incomplete output as a finished run. Copy the `scripts/` directory along with `run_all.sh` when moving the project to another machine.
+The output directory must be new.
 
 ## Fixed experiment settings
 
@@ -86,20 +86,14 @@ checkpoints/adversarially_trained_model.pt
 checkpoints/pgd_adversarially_trained_model.pt
 ```
 
-Baseline training saves `results/clean_run_metadata.json`. FGSM training saves `results/adversarial_training_clean_test.json`. The existing output schemas are retained. The PGD training script itself prints clean test metrics without a results JSON; the full-run verifier saves clean metrics and all attack results for all three models in the run's `evaluation/metrics.json`.
+Baseline training saves `results/clean_run_metadata.json`. FGSM training saves `results/adversarial_training_clean_test.json`. The PGD training script itself prints clean test metrics without a results JSON; the full-run verifier saves clean metrics and all attack results for all three models in the run's `evaluation/metrics.json`.
 
-The original dataset and all three checkpoints are included. See [data/README.md](data/README.md) for attribution and integrity information, and [checkpoints/README.md](checkpoints/README.md) for the model files. Archives, old backups, virtual environments, and failed setup attempts are ignored by Git without being deleted. Dataset files, `.pt` checkpoints, and the successful run evidence are not ignored. Use command-line Git for the dataset, since its largest file exceeds the browser-upload limit.
+The dataset hashes are in [data/SHA256SUMS](data/SHA256SUMS). See [checkpoints/README.md](checkpoints/README.md) for model details and hashes.
 
-Training and evaluation seed Python, NumPy, and PyTorch with 42. cuDNN benchmarking is disabled and deterministic cuDNN kernels are requested. This improves repeatability on a fixed environment; it does not promise bitwise equality across hardware or PyTorch versions. The original baseline metadata records PyTorch 2.7.0+cu126 and Python 3.10.22. `requirements.txt` specifies the existing dependencies without pinning a new environment over the old experiments.
-
-## Correctness checks
+## Tests
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-Tests cover input gradients, fixed-origin PGD projection, random initialization, zero epsilon, detached outputs, parameter gradient isolation, model modes, both training scripts, checkpoint selection, matching evaluation attacks, metric denominators, confusion matrices, empty loaders, and the official dataset split. MNIST must be available locally or downloadable for the split check.
-
-See `AUDIT.md` for findings and validation results. A finite PGD run is an empirical attack, not a certificate of robustness. The sweep is diagnostic: it reports observed accuracy without forcing monotonic results or selecting settings to improve reported robustness.
-
-`results/audit_validation.json` and `results/audit_validation.txt` record this review's runtime checks: full clean-test evaluation for all three checkpoints, baseline attacks on the first 1,024 test examples, and defense attack smoke tests on the first 64. Their subset attack results must not be reported as full-test robustness results. The evaluation commands above use all 10,000 test examples.
+The tests cover attack gradients and bounds, model modes, training updates, evaluation metrics, checkpoint selection, and the dataset split.
