@@ -1,0 +1,181 @@
+[
+  {
+    "model": "clean_model.pt",
+    "setting": "clean",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "clean_model.pt",
+    "setting": "FGSM epsilon=0.1",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "clean_model.pt",
+    "setting": "FGSM epsilon=0.2",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "clean_model.pt",
+    "setting": "FGSM epsilon=0.3",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "clean_model.pt",
+    "setting": "PGD epsilon=0.05 alpha=0.01 steps=40",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "clean_model.pt",
+    "setting": "PGD epsilon=0.1 alpha=0.01 steps=40",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "clean_model.pt",
+    "setting": "PGD epsilon=0.2 alpha=0.01 steps=40",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "clean_model.pt",
+    "setting": "PGD epsilon=0.3 alpha=0.01 steps=40",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "adversarially_trained_model.pt",
+    "setting": "clean",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "adversarially_trained_model.pt",
+    "setting": "Defended model - FGSM epsilon=0.1",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "adversarially_trained_model.pt",
+    "setting": "Defended model - FGSM epsilon=0.2",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "adversarially_trained_model.pt",
+    "setting": "Defended model - FGSM epsilon=0.3",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "adversarially_trained_model.pt",
+    "setting": "Defended model - PGD epsilon=0.3 alpha=0.01 steps=40",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "pgd_adversarially_trained_model.pt",
+    "setting": "clean",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "pgd_adversarially_trained_model.pt",
+    "setting": "Defended model - FGSM epsilon=0.1",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "pgd_adversarially_trained_model.pt",
+    "setting": "Defended model - FGSM epsilon=0.2",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "pgd_adversarially_trained_model.pt",
+    "setting": "Defended model - FGSM epsilon=0.3",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "model": "pgd_adversarially_trained_model.pt",
+    "setting": "Defended model - PGD epsilon=0.3 alpha=0.01 steps=40",
+    "examples": 10000,
+    "accuracy_matches_matrix": true
+  },
+  {
+    "file": "results/poisoning/clean_baseline_seed42.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/poisoned_030_seed42.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/poisoned_050_seed44.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/clean_baseline_seed43.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/poisoned_010_seed43.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/poisoned_050_seed43.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/poisoned_010_seed44.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/poisoned_050_seed42.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/clean_baseline_seed44.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/poisoned_030_seed43.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/defended_recovery_seed42.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/poisoned_030_seed44.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "file": "results/poisoning/poisoned_010_seed42.json",
+    "examples": 10000,
+    "confusion_metrics_and_epoch_consistent": true
+  },
+  {
+    "shared_and_adversarial_saved_split_identical": true
+  },
+  {
+    "all_three_current_checkpoint_hashes_match_accepted_run": true
+  }
+]

@@ -19,13 +19,17 @@ def validate_attack_inputs(images, epsilon, alpha=None, steps=None):
 @torch.no_grad()
 def check_adversarial(images, adversarial, epsilon, *, verbose=False, tolerance=1e-6):
     """Check pixel-space bounds and return batch statistics."""
-    assert adversarial.shape == images.shape, "Adversarial shape changed"
-    assert torch.isfinite(adversarial).all(), "Nonfinite adversarial pixels"
+    if adversarial.shape != images.shape:
+        raise ValueError("Adversarial shape changed")
+    if not torch.isfinite(adversarial).all():
+        raise ValueError("Nonfinite adversarial pixels")
     max_linf = (adversarial - images).abs().max().item()
     pixel_min = adversarial.min().item()
     pixel_max = adversarial.max().item()
-    assert max_linf <= epsilon + tolerance, "L-infinity bound exceeded"
-    assert 0.0 <= pixel_min <= pixel_max <= 1.0, "Pixels outside [0, 1]"
+    if max_linf > epsilon + tolerance:
+        raise ValueError("L-infinity bound exceeded")
+    if not 0.0 <= pixel_min <= pixel_max <= 1.0:
+        raise ValueError("Pixels outside [0, 1]")
     if verbose:
         print(
             f"Attack sanity: max_linf={max_linf:.8f}, "

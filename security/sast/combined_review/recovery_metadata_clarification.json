@@ -1,0 +1,6 @@
+{
+  "original_files_modified": false,
+  "recovery_evidence.json": "Recorded blocked candidate is poisoned_030.",
+  "defended_recovery_seed42.json": "rejected_attack=poisoned_050 is inconsistent historical metadata; do not treat it as evidence of a separate 50% block-and-recovery sequence.",
+  "supported_claim": "Gate rejected all three label-poisoned candidates. Recorded recovery sequence rejected the 30% candidate, restored and verified clean data; seed42 recovered-data training matched the clean baseline."
+}

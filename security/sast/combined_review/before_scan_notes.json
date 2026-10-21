@@ -1,0 +1,5 @@
+{
+  "scope": "18 original active Python source files plus complete uploaded notebook export; new scanner script excluded because it did not exist in original source",
+  "findings": 13,
+  "failed_export_attempt": "A preliminary attempt without IPython could not parse notebook magic; failed_export_attempt.json retained but not counted as a completed scan. Complete before.json supersedes it."
+}

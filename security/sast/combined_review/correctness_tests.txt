@@ -1,0 +1,19 @@
+test_attacks_preserve_inputs_parameter_grads_and_mode (test_correctness.AttackTests.test_attacks_preserve_inputs_parameter_grads_and_mode) ... ok
+test_fgsm_matches_input_gradient (test_correctness.AttackTests.test_fgsm_matches_input_gradient) ... ok
+test_mode_restored_when_attack_fails (test_correctness.AttackTests.test_mode_restored_when_attack_fails) ... ok
+test_pgd_fixed_original_and_fresh_gradients (test_correctness.AttackTests.test_pgd_fixed_original_and_fresh_gradients) ... ok
+test_random_start_and_zero_epsilon (test_correctness.AttackTests.test_random_start_and_zero_epsilon) ... ok
+test_sanity_rejects_invalid_bounds (test_correctness.AttackTests.test_sanity_rejects_invalid_bounds) ... ok
+test_training_update_has_only_combined_batch_gradients (test_correctness.AttackTests.test_training_update_has_only_combined_batch_gradients) ... ok
+test_explicit_checkpoint_and_default (test_correctness.CheckpointCLITests.test_explicit_checkpoint_and_default) ... ok
+test_accuracy_asr_confusion_and_weighted_loss (test_correctness.EvaluationTests.test_accuracy_asr_confusion_and_weighted_loss) ... ok
+test_baseline_and_defense_use_identical_main_attacks (test_correctness.EvaluationTests.test_baseline_and_defense_use_identical_main_attacks) ... ok
+test_confusion_matrix_rows_are_targets (test_correctness.EvaluationTests.test_confusion_matrix_rows_are_targets) ... ok
+test_empty_loaders_are_rejected (test_correctness.EvaluationTests.test_empty_loaders_are_rejected) ... ok
+test_split_and_pixel_space (test_correctness.EvaluationTests.test_split_and_pixel_space) ... ok
+test_real_defense_loops_use_current_model_and_combined_batches (test_correctness.TrainingScriptTests.test_real_defense_loops_use_current_model_and_combined_batches) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.190s
+
+OK

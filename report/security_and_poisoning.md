@@ -1,3 +1,5 @@
+> Historical component draft. The authoritative integrated report is [REPORT.md](REPORT.md). Its corrected paths, later smoke-test status, expanded scan and combined scope supersede older statements below.
+
 # Secure MNIST: security engineering and training-data integrity
 
 ## 1. System and experimental design

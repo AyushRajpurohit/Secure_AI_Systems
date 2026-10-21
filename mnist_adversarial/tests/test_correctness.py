@@ -99,9 +99,9 @@ class AttackTests(unittest.TestCase):
             optimizer.step()
 
     def test_sanity_rejects_invalid_bounds(self):
-        with self.assertRaises(AssertionError):
+        with self.assertRaises(ValueError):
             check_adversarial(torch.tensor([.5]), torch.tensor([.8]), .1)
-        with self.assertRaises(AssertionError):
+        with self.assertRaises(ValueError):
             check_adversarial(torch.tensor([.9]), torch.tensor([1.1]), .3)
         with self.assertRaises(ValueError):
             fgsm_attack(self.model, self.images + 1, self.labels, self.criterion, .3)
