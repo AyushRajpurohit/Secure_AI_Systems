@@ -1,0 +1,12 @@
+{
+  "python": "3.12.14",
+  "torch": "2.7.0+cpu",
+  "torchvision": "0.22.0+cpu",
+  "numpy": "2.3.5",
+  "sklearn": "1.8.0",
+  "device": "cpu",
+  "threads": 2,
+  "tests_passed": 14,
+  "full_training_rerun": false,
+  "full_15_attack_evaluation_rerun": false
+}

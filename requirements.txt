@@ -1,0 +1,8 @@
+# Convenience dependencies, not the original experimental environment lockfile.
+-r mnist_adversarial/requirements.txt
+matplotlib
+pandas
+nbformat
+nbconvert
+ipython
+bandit==1.9.4

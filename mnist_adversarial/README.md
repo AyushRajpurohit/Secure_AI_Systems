@@ -1,3 +1,5 @@
+> Integrated project instructions and final findings: see [the root README](../README.md) and [combined report](../report/REPORT.md).
+
 # Secure AI Systems — MNIST Red/Blue Teaming
 
 A PyTorch CNN for MNIST, tested with untargeted white-box FGSM and PGD attacks and defended with adversarial training.
@@ -66,7 +68,7 @@ Baseline and defenses use the same official test loader configuration (batch siz
 
 Evaluation prints clean accuracy, adversarial accuracy/loss, attack success rate, elapsed attack/evaluation time, and adversarial confusion matrices. Accuracy uses all test examples. Attack success rate uses only examples classified correctly before the attack; it reports 0 if that set is empty. Confusion matrix rows are true labels and columns are predictions, in digit order 0–9.
 
-Attack bounds are asserted automatically, including the random start and every PGD step. `--print-sanity` also prints the maximum L-infinity perturbation and minimum/maximum adversarial pixel values for each attack over the test set. Attack functions accept `verbose=True` to print these statistics for an individual batch. Checks use a perturbation tolerance of `1e-6` and require pixels in `[0,1]`. Run Python normally; `python -O` disables assertions.
+Attack bounds are checked automatically with explicit exceptions, including the random start and every PGD step. `--print-sanity` also prints the maximum L-infinity perturbation and minimum/maximum adversarial pixel values for each attack over the test set. Attack functions accept `verbose=True` to print these statistics for an individual batch. Checks use a perturbation tolerance of `1e-6` and require pixels in `[0,1]`. The active bound checks remain enabled under `python -O`; the full verifier still deliberately requires non-optimized Python.
 
 FGSM/PGD generate input gradients in evaluation mode, return detached examples, preserve parameter gradients, and restore the caller's model mode. Training clears optimizer gradients before generating adversarial examples using the current model, then trains on the combined batch.
 

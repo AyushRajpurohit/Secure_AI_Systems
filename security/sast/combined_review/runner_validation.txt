@@ -1,0 +1,4 @@
+bash -n exit: 0
+Snapshot input discovery PASS: ../.gitignore
+
+Full training runner NOT executed.

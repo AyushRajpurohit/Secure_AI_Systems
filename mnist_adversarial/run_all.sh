@@ -84,11 +84,25 @@ PY
         fi
     done
 
-    source_files=(src/*.py attacks/*.py defenses/*.py tests/*.py scripts/*.py run_all.sh evaluate_defended.py requirements.txt .gitignore)
+    source_files=(src/*.py attacks/*.py defenses/*.py tests/*.py scripts/*.py run_all.sh evaluate_defended.py requirements.txt)
+    # Standalone and merged repository layouts keep ignore rules in different places.
+    if [[ -f .gitignore ]]; then
+        ignore_file=.gitignore
+    elif [[ -f ../.gitignore ]]; then
+        ignore_file=../.gitignore
+    else
+        printf 'Missing repository .gitignore\n' >&2
+        exit 1
+    fi
+    source_files+=("$ignore_file")
     sha256sum "${source_files[@]}" > "$RUN_DIR/source_sha256.txt"
     for file in "${source_files[@]}"; do
-        mkdir -p "$RUN_DIR/source/$(dirname "$file")"
-        cp "$file" "$RUN_DIR/source/$file"
+        snapshot_file="$file"
+        if [[ "$file" == ../.gitignore ]]; then
+            snapshot_file="repository_root/.gitignore"
+        fi
+        mkdir -p "$RUN_DIR/source/$(dirname "$snapshot_file")"
+        cp "$file" "$RUN_DIR/source/$snapshot_file"
     done
     sha256sum data/MNIST/raw/* > "$RUN_DIR/dataset_sha256.txt"
     git status --short > "$RUN_DIR/git_status_before.txt" 2>&1 || true

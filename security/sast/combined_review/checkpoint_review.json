@@ -1,0 +1,35 @@
+[
+  {
+    "checkpoint": "clean_model.pt",
+    "sha256": "c341d87149018f1d005fdb817d16f1a1fd4a1594262996a072b2b020a8f51bfb",
+    "unchanged": true,
+    "clean_accuracy_10000": 0.9884,
+    "clean_loss_10000": 0.03471519671736751,
+    "attack_smoke_only_first_64": {
+      "fgsm_accuracy": 0.046875,
+      "pgd_accuracy": 0.0
+    }
+  },
+  {
+    "checkpoint": "adversarially_trained_model.pt",
+    "sha256": "0444ec81b722bcf38454cbba2f2c971867d7c82be32b65bbeefb1e30834dd0e9",
+    "unchanged": true,
+    "clean_accuracy_10000": 0.9854,
+    "clean_loss_10000": 0.04631399654308334,
+    "attack_smoke_only_first_64": {
+      "fgsm_accuracy": 1.0,
+      "pgd_accuracy": 0.0
+    }
+  },
+  {
+    "checkpoint": "pgd_adversarially_trained_model.pt",
+    "sha256": "00fc7dfa7037517fbbd418ed664b4e4512f25fd381ac8ae22d56be609176b494",
+    "unchanged": true,
+    "clean_accuracy_10000": 0.9899,
+    "clean_loss_10000": 0.02897482716143131,
+    "attack_smoke_only_first_64": {
+      "fgsm_accuracy": 0.796875,
+      "pgd_accuracy": 0.625
+    }
+  }
+]
